@@ -50,6 +50,7 @@ void setup() {
     }
 
     TxBuf[2]=35; //sets output to warm white
+    TxBuf[3]=255; //sets shutter to open
 
 }
 
@@ -62,12 +63,12 @@ void loop() {
     #define AVERAGE 32
 
     v=(analogRead(34)/16); //adc is 12 bit
-    AvBuf[AvPtr]=v; 
-    AvPtr++; if (AvPtr>=AVERAGE) AvPtr=0;
+    AvBuf[AvPtr]=v; //write into the average buffer
+    AvPtr++; if (AvPtr>=AVERAGE) AvPtr=0; //move the average buffer pointer on
     av=0; for (i=0; i<AVERAGE; i++) av+=AvBuf[i];
-    av=av/AVERAGE;
-    TxBuf[1]=av;
-    DMX::WriteAll(&TxBuf[1],1,512);
+    av=av/AVERAGE; //work out the average reading
+    TxBuf[1]=av;  //set to the dimmer channel
+    DMX::WriteAll(&TxBuf[1],1,512);  //update the DMX output
     //Serial.print(av);Serial.println(" ");
     delay(20);
 

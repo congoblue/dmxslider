@@ -1,56 +1,5 @@
 
-#define SHOWTIMEPANEL 40
 
-
-#define DEVICE SHOWTIMEPANEL
-
-#if DEVICE==SHOWTIMEPANEL
-    #define DEVICE_NAME "Showtime Panel"
-    #define DEVICE_NAME_WIFI "ShowtimePanel"
-    #define VERSION 0
-    #define SUBVERSION 1
-    #define BUILDNUMBER 14
-#else
-    #define DEVICE_NAME "Device"
-    #define DEVICE_NAME_WIFI "Device"
-    #define VERSION 0
-    #define SUBVERSION 1
-    #define BUILDNUMBER 0004
-#endif
-
-//#define RGBWPIX 1
-
-
-// Touchscreen Calibration and EEPROM Storage Defines
-#define CFG_EEPROM_TOUCHSCREEN_CAL_AN 0       ///< EEPROM Storage Location
-#define CFG_EEPROM_TOUCHSCREEN_CAL_BN 4       ///< EEPROM Storage Location
-#define CFG_EEPROM_TOUCHSCREEN_CAL_CN 8       ///< EEPROM Storage Location
-#define CFG_EEPROM_TOUCHSCREEN_CAL_DN 12      ///< EEPROM Storage Location
-#define CFG_EEPROM_TOUCHSCREEN_CAL_EN 16      ///< EEPROM Storage Location
-#define CFG_EEPROM_TOUCHSCREEN_CAL_FN 20      ///< EEPROM Storage Location
-#define CFG_EEPROM_TOUCHSCREEN_CAL_DIVIDER 24 ///< EEPROM Storage Location
-#define CFG_EEPROM_TOUCHSCREEN_CALIBRATED 28  ///< EEPROM Storage Location
-
-#define EEPROM_SSID 32 //32
-#define EEPROM_PWD 64 //16
-#define EEPROM_WIFIMODE 80
-
-#define EEPROM_USERPARAM_SIG 96
-#define EEPROM_TW_SPEED 97
-#define EEPROM_TW_FADE 98
-#define EEPROM_TW_VOLUME 99
-#define EEPROM_TW_COLOUR 100
-#define EEPROM_TW_PATTERN 101
-#define EEPROM_TW_DIMMER 102
-#define EEPROM_TW_USERPROG 103
-#define EEPROM_TW_MIDISONG 104
-#define EEPROM_USERCOUNT 105
-
-#define EEPROM_PAIR_TABLE 128 //16*8 bytes = 128
-#define MAX_PAIR 8
-
-#define EEPROM_DEVICE_PAIR 256 //32*8 bytes = 256
-#define MAX_DEVICE_PAIR 32 //this allows 4 devices for each of the 8 switches
 
 #define X_RESET 1
 #define LEDDA0 2
